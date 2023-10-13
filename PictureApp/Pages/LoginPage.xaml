@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:customCotrols="clr-namespace:PictureApp.CustomControls"
+             x:Class="PictureApp.Pages.LoginPage"
+             >
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Label x:Name="welcomeLabel" Text="-"
+               FontSize="25"
+               TranslationY="-50"
+               />
+        <customCotrols:LoginEntry x:Name="loginEntry" IsPassword="True"
+               MaxLength="5"
+               FontSize="50"
+               Placeholder="*****"
+               IsTextPredictionEnabled="false"
+               Keyboard="Numeric"
+               ReturnType="Next"
+               BorderThickness="1"
+               BorderColor="DimGray"
+               BackgroundColor="LightGrey"
+               CornerRadius="10"
+               Padding="10"
+               Completed="LoginEntry_Completed"
+               WidthRequest="130" HeightRequest="100"
+               />
+    </StackLayout>
+</ContentPage>

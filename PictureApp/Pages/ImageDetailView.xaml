@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PictureApp.Pages.ImageDetailView"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <ContentPage.Content>
+        <StackLayout Padding="20" VerticalOptions="Center" HorizontalOptions="Center">
+            <Image x:Name="imageDetail" />
+            <Label x:Name="imageName" Text="" FontSize="24" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
