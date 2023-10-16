@@ -10,5 +10,6 @@ namespace PictureApp.Models
     {
         public string ImagePath { get; set; }
         public string ImageName { get; set; }
+        public DateTime CreationTime { get; set; }
     }
 }

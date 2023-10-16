@@ -15,5 +15,6 @@ public partial class ImageDetailView : ContentPage
         base.OnAppearing();
         imageDetail.Source = _selectedImage.ImagePath;
         imageName.Text = _selectedImage.ImageName;
+        imageDate.Text = _selectedImage.CreationTime.ToString();
     }
 }

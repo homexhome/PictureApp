@@ -8,6 +8,7 @@
         <StackLayout Padding="20" VerticalOptions="Center" HorizontalOptions="Center">
             <Image x:Name="imageDetail" />
             <Label x:Name="imageName" Text="" FontSize="24" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
+            <Label x:Name="imageDate" Text="" FontSize="24" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 

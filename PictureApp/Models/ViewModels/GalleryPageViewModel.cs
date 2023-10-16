@@ -34,7 +34,8 @@ namespace PictureApp.Models.ViewModels
                 var imageFiles = Directory.GetFiles(imageDirectory);
                 foreach (var imagePath in imageFiles) {
                     var imageName = Path.GetFileName(imagePath);
-                    ImageItems.Add(new ImageItem { ImagePath = imagePath, ImageName = imageName });
+                    var creationTime = File.GetCreationTime(imagePath);
+                    ImageItems.Add(new ImageItem { ImagePath = imagePath, ImageName = imageName, CreationTime = creationTime });
                 }
             }
         }
@@ -56,10 +57,8 @@ namespace PictureApp.Models.ViewModels
             }
             if (File.Exists(imageItem.ImagePath)) {
                 try {
-                    using (FileStream fs = new FileStream(imageItem.ImagePath, FileMode.Open, FileAccess.Read)) {
                         ImageItems.Remove(imageItem);
                         File.Delete(imageItem.ImagePath);
-                    }
                 }
                 catch (IOException ex) {
                     // Файл заблокирован другим процессом или приложением
